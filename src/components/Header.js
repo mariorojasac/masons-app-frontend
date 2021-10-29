@@ -1,5 +1,14 @@
 const Header = (props) => {
-  return <div>Header</div>;
+  return (
+    <>
+      <header>
+        <nav>
+          <p>Hello, Name</p>
+          <button>Log Out</button>
+        </nav>
+      </header>
+    </>
+  );
 };
 
 export default Header;

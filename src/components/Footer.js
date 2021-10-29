@@ -1,6 +1,8 @@
 const Footer = (props) => {
     return (
-        <div>Footer</div>
+        <footer>
+            <p>Made by Mario Rojas @copyright 2021</p>
+        </footer>
     )
 }
 
