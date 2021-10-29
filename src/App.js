@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Home from './pages/Home';
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Home/>
       <Header/>
       <Dashboard />
+      <Footer/>
     </div>
   );
 }
