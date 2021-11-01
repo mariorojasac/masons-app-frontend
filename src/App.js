@@ -3,21 +3,21 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Dashboard from "./pages/Dashboard";
-import Footer from "./components/Footer";
+import Mycards from "./pages/Mycards";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact>
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route>
+        <Route path="/dashboard">
           <Dashboard />
         </Route>
-        <Route>
-          <Footer />
+        <Route path="/mycards">
+          <Mycards />
         </Route>
       </Switch>
     </div>

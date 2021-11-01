@@ -1,13 +1,16 @@
-const Dashboard = (props) => {
-    return (
-      <div className="container">
-        <h1>Dashboard</h1>
+import Footer from "../components/Footer";
 
-        <div className="card">My Card's</div>
-        <div className="card">Resources</div>
-        <div className="card">My Profile</div>
-      </div>
-    );
+const Dashboard = (props) => {
+  return (
+    <div className="container">
+      <h1>Dashboard</h1>
+
+      <div className="card">My Card's</div>
+      <div className="card">Resources</div>
+      <div className="card">My Profile</div>
+      <Footer/>
+    </div>
+  );
 };
 
 export default Dashboard;
