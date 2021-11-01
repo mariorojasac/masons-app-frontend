@@ -1,9 +1,12 @@
 const Footer = (props) => {
-    return (
-        <footer>
-            <p>Made by Mario Rojas @copyright 2021</p>
-        </footer>
-    )
-}
+  return (
+    <footer>
+      <p>
+        Build & Designed by Mario Rojas - CopyRight &copy; All Rights Reserved
+        Mason's App {new Date().getFullYear()}
+      </p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
