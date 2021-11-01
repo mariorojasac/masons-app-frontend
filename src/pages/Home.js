@@ -1,11 +1,17 @@
+import { Link } from "react-router-dom";
+
 const Home = (props) => {
   return (
     <>
       <div>Mason's App</div>
-      <button>Login</button>
-          <button>sign Up</button>
-          <div><p>scroll down</p></div>
-<hr />
+      <Link to="/login">
+        <button>Login</button>
+      </Link>
+      <button>sign Up</button>
+      <div>
+        <p>scroll down</p>
+      </div>
+      <hr />
       <div>
         <p>About</p>
         <p>Our Mission</p>
@@ -21,8 +27,8 @@ const Home = (props) => {
             hic voluptatem fugiat veritatis, veniam eligendi?
           </p>
         </div>
-          </div>
-          <hr />
+      </div>
+      <hr />
     </>
   );
 };

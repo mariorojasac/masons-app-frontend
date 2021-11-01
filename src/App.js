@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import Mycards from "./pages/Mycards";
 import Resources from "./pages/Resources"
 import Myprofile from "./pages/Myprofile";
+import Login from "./pages/Login";
 import "./App.css";
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/login">
+          <Login/>
         </Route>
         <Route path="/dashboard">
           <Dashboard />
