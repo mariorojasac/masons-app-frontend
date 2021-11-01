@@ -1,9 +1,17 @@
-const Mycards = (props) => {
-    return (
-        <>
-            <div>My Card's</div>
-        </>
-    )
-}
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
-export default Mycards
+
+const Mycards = (props) => {
+  return (
+      <>
+      <Header />
+      <Link to="/dashboard"><button>Back to Dashboard</button> </Link>
+          <div>My Card's</div>
+          <Footer/>
+    </>
+  );
+};
+
+export default Mycards;

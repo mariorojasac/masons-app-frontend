@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./pages/Home";
-import Header from "./components/Header";
 import Dashboard from "./pages/Dashboard";
 import Mycards from "./pages/Mycards";
+import Resources from "./pages/Resources"
+import Myprofile from "./pages/Myprofile";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,12 @@ function App() {
         </Route>
         <Route path="/mycards">
           <Mycards />
+        </Route>
+        <Route path='/resources'>
+          <Resources/>
+        </Route>
+        <Route path='/myprofile'>
+          <Myprofile/>
         </Route>
       </Switch>
     </div>
