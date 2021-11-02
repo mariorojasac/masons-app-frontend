@@ -6,6 +6,7 @@ import Mycards from "./pages/Mycards";
 import Resources from "./pages/Resources"
 import Myprofile from "./pages/Myprofile";
 import Login from "./pages/Login";
+import {auth} from "./services/firebase"
 import "./App.css";
 
 function App() {
