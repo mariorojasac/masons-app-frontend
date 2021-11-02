@@ -21,7 +21,6 @@ const signIn = () => {
 }
 const logOut = () => {
     return auth.signOut
-    
 }
 
 
