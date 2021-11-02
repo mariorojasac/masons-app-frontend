@@ -10,6 +10,8 @@ import {auth} from "./services/firebase"
 import "./App.css";
 
 function App() {
+
+  const [state, setState] = useState()
   return (
     <div className="App">
       <Switch>
