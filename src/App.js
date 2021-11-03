@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Mycards from "./pages/Mycards";
 import Resources from "./pages/Resources";
-import Myprofile from "./pages/Myprofile";
 import Login from "./pages/Login";
 import { auth } from "./services/firebase";
 import "./App.css";
@@ -21,7 +20,6 @@ function App() {
 
   const getCards = async () => {
     if (!user) return;
-
     const token = await user.getIdToken();
     const response = await fetch(API_URL, {
       method: "GET",
@@ -55,7 +53,6 @@ function App() {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
-
       if (user) {
         fetchData.current();
       } else {
@@ -70,46 +67,11 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/">
-          <Home user={user} />
-        </Route>
-        <Route
-          path="/login"
-          render={() => (user ? <Redirect to="/dashboard" /> : <Login />)}
-        />
-        <Route
-          
-          path="/dashboard"
-          render={() =>
-            user ? (
-              <>
-                <Header user={user} />
-                <Dashboard user={user} />
-              </>
-            ) : (
-              <Redirect to="/login" />
-            )
-          }
-        />
-        <Route
-          path="/mycards"
-          render={() =>
-            user ? (
-            
-            
-                <Mycards cards={cards} />
-              
-            ) : (
-              <Redirect to="/login" />
-            )
-          }
-        />
-        <Route path="/resources">
-          <Resources />
-        </Route>
-        <Route path="/myprofile">
-          <Myprofile />
-        </Route>
+        <Route exact path="/"><Home user={ user }/></Route>
+        <Route path="/login" render={() => (user ? <Redirect to="/dashboard" /> : <Login />)}/>
+        <Route path="/dashboard" render={() => user ? ( <> <Header user={user} /><Dashboard user={user} /></>) : (<Redirect to="/login" /> )}/>
+        <Route path="/mycards" render={() => user ? (  <Mycards cards={cards} /> ) : ( <Redirect to="/login" /> ) }/>
+        <Route path="/resources"><Resources/></Route>
       </Switch>
     </div>
   );

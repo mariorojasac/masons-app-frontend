@@ -10,7 +10,6 @@ const Dashboard = (props) => {
       <h1>Dashboard</h1>
       <div className="card"><Link to="/mycards">My Card's</Link></div>
       <div className="card"><Link to="/resources">Resources</Link></div>
-      <div className="card"><Link to="/myprofile">My Profile</Link></div>
       <Footer />
     </div>
   );

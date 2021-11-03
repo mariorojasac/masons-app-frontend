@@ -4,11 +4,17 @@ import Header from "../components/Header";
 const Resources = (props) => {
   return (
     <>
-      <Header/>
       <Link to="/dashboard">
-        <button>Back to Dashboard</button>{" "}
+        <button>Back to Dashboard</button>
       </Link>
-      <div>Resources</div>
+      <div>
+        <div> Kids Youtube </div>
+        <div> Blipi</div>
+        <div> Disney Plus </div>
+        <div> Netflix </div>
+        <div> Pocoyo </div>
+        <div> Mickey Clup House </div>
+      </div>
       <Footer/>
     </>
   );
