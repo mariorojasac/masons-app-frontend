@@ -33,6 +33,8 @@ const Mycards = (props) => {
     })
   }
 
+  
+
   return (
     <>
       <div>
@@ -43,11 +45,14 @@ const Mycards = (props) => {
 
       <div>
         {props.cards.map((c) => (
-          <p>
-            <ul>
-              <li>CARD{c.title}</li>
-            </ul>
-          </p>
+          <div>
+            <h1>Cards</h1>
+            <p>Title: {c.title}</p>
+            <p>Picture: {c.picture}</p>
+            <p>Description: {c.description}</p>
+            <p>Sound: {c.sound}</p>
+            <p>Type: {c.title}</p>
+          </div>
         ))}
         <p>Add Card</p>
         <form onSubmit={handleSubmit}>

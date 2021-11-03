@@ -18,7 +18,7 @@ function App() {
 
   const fetchData = useRef(null);
 
-  const API_URL = "http://localhost:3000/api/card";
+  const API_URL = "http://localhost:3001/api/card";
 
   const getCards = async () => {
     if (!user) return;
@@ -81,7 +81,7 @@ function App() {
           render={() =>
             user ? (
               <>
-                {" "}
+                
                 <Header user={user} />
                 <Dashboard user={user} />
               </>
