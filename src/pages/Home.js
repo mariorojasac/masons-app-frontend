@@ -6,8 +6,38 @@ const Home = (props) => {
       <div>Mason's App</div>
       <Link to="/login">
         <button>Login</button>
+        <div className="teddy">
+          <div className="right-ear"></div>
+          <div className="left-ear"></div>
+          <div className="head">
+            <div className="right-eye"></div>
+            <div className="left-eye"></div>
+            <div className="mouth-area">
+              <div className="right-cheek"></div>
+              <div className="left-cheek"></div>
+              <div className="nose">
+                <div className="nose-inner"></div>
+              </div>
+            </div>
+          </div>
+          <div className="body"></div>
+          <div className="right-arm">
+            <div className="arm-inner"></div>
+            <div className="paw"></div>
+          </div>
+          <div className="left-arm">
+            <div className="arm-inner"></div>
+            <div className="paw"></div>
+          </div>
+          <div className="right-leg">
+            <div className="foot"></div>
+          </div>
+          <div className="left-leg">
+            <div className="foot"></div>
+          </div>
+        </div>
       </Link>
-      <button>sign Up</button>
+
       <div>
         <p>scroll down</p>
       </div>

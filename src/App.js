@@ -8,6 +8,8 @@ import Login from "./pages/Login";
 import { auth } from "./services/firebase";
 import "./App.css";
 import Header from "./components/Header";
+import "./styles.css";
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -16,7 +18,7 @@ function App() {
 
   const fetchData = useRef(null);
 
-  const API_URL = "http://localhost:3000/api/user";
+  const API_URL = "http://localhost:3000/api/card";
 
   const getCards = async () => {
     if (!user) return;
@@ -67,11 +69,40 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/"><Home user={ user }/></Route>
-        <Route path="/login" render={() => (user ? <Redirect to="/dashboard" /> : <Login />)}/>
-        <Route path="/dashboard" render={() => user ? ( <> <Header user={user} /><Dashboard user={user} /></>) : (<Redirect to="/login" /> )}/>
-        <Route path="/mycards" render={() => user ? (  <Mycards cards={cards} /> ) : ( <Redirect to="/login" /> ) }/>
-        <Route path="/resources"><Resources/></Route>
+        <Route exact path="/">
+          <Home user={user} />
+        </Route>
+        <Route
+          path="/login"
+          render={() => (user ? <Redirect to="/dashboard" /> : <Login />)}
+        />
+        <Route
+          path="/dashboard"
+          render={() =>
+            user ? (
+              <>
+                {" "}
+                <Header user={user} />
+                <Dashboard user={user} />
+              </>
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/mycards"
+          render={() =>
+            user ? (
+              <Mycards cards={cards} createCard={createCard} />
+            ) : (
+              <Redirect to="/login" />
+            )
+          }
+        />
+        <Route path="/resources">
+          <Resources />
+        </Route>
       </Switch>
     </div>
   );

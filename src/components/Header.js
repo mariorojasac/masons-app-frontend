@@ -7,7 +7,7 @@ const Header = (props) => {
       <nav>
         {props.user ? (
           <>
-            <p>Hello, {props.user.displayName} </p>
+            <p>Welcome, {props.user.displayName} </p>
             <img src={props.user.photoURL} alt={props.user.displayName} />
             <img
               src="https://i.imgur.com/OVOPbLz.jpeg"

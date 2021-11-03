@@ -3,13 +3,13 @@ import 'firebase/auth'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAwDxNwMmJDajyQnjH1BzViRoggwC3baRg",
-  authDomain: "react-crm-27302.firebaseapp.com",
-  projectId: "react-crm-27302",
-  storageBucket: "react-crm-27302.appspot.com",
-  messagingSenderId: "97576807748",
-  appId: "1:97576807748:web:b627637225887b52b0bb11",
-  measurementId: "G-6MNYVS9YLG"
+  apiKey: "AIzaSyCPP0ttJcvdae881oUP45XmLROy7xIvhDk",
+  authDomain: "masons-app.firebaseapp.com",
+  projectId: "masons-app",
+  storageBucket: "masons-app.appspot.com",
+  messagingSenderId: "1078369632565",
+  appId: "1:1078369632565:web:cf379c63872618e8df4c7c",
+  measurementId: "G-MB442526CW",
 };
 firebase.initializeApp(firebaseConfig)
 

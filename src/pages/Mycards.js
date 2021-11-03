@@ -1,10 +1,38 @@
-import { Helmet } from "react-helmet";
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const Mycards = (props) => {
- 
+  const [formState, setFormState] = useState({
+    title: "",
+    picture: "",
+    description: "",
+    sound: "",
+    type: "",
+  });
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+
+    setFormState((prevState) => ({
+      ...prevState,
+      [e.target.name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+     props.createCard(formState);
+    setFormState({
+      title: "",
+    picture: "",
+    description: "",
+    sound: "",
+    type: "",
+    })
+  }
+
   return (
     <>
       <div>
@@ -13,6 +41,54 @@ const Mycards = (props) => {
         </Link>
       </div>
 
+      <div>
+        {props.cards.map((c) => (
+          <p>
+            <ul>
+              <li>CARD{c.title}</li>
+            </ul>
+          </p>
+        ))}
+        <p>Add Card</p>
+        <form onSubmit={handleSubmit}>
+          <label>Title</label>
+          <input
+            type="text"
+            value={formState.title}
+            name="title"
+            onChange={handleChange}
+          />
+          <label>Picture</label>
+          <input
+            type="text"
+            value={formState.picture}
+            name="picture"
+            onChange={handleChange}
+          />
+          <label>Description</label>
+          <input
+            type="text"
+            value={formState.description}
+            name="description"
+            onChange={handleChange}
+          />
+          <label>Sound</label>
+          <input
+            type="text"
+            value={formState.sound}
+            name="sound"
+            onChange={handleChange}
+          />
+          <label>Type</label>
+          <input
+            type="text"
+            value={formState.type}
+            name="type"
+            onChange={handleChange}
+          />
+          <input type="submit" value="Add Card" />
+        </form>
+      </div>
 
       <Footer />
     </>
