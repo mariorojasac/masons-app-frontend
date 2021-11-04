@@ -9,26 +9,47 @@ import CardContent from "@mui/material/CardContent";
 const Dashboard = (props) => {
   return (
     <div className="container">
-      
       <Box
         display="flex"
         justifyContent="center"
         alignItems="center"
-        sx={{ width: "100%", mt: "1rem", p: "1rem", flexWrap: "wrap" }}
+        sx={{ width: "100%", mt: "10rem", p: "1rem", flexWrap: "wrap" }}
       >
         <Paper
           elevation={4}
-          sx={{ width: "20%", height: "20rem", p: "1rem", m: "1rem" }}
+          sx={{
+            width: "20%",
+            height: "20rem",
+            p: "1rem",
+            m: "1rem",
+            mb: "10rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
           className="card"
         >
-          <CardContent><Link to="/mycards">My Card's</Link></CardContent>
+          <CardContent>
+            <Link to="/mycards">MY CARDS</Link>
+          </CardContent>
         </Paper>
         <Paper
           elevation={4}
-          sx={{ width: "20%", height: "20rem", p: "1rem", m: "1rem" }}
+          sx={{
+            width: "20%",
+            height: "20rem",
+            p: "1rem",
+            m: "1rem",
+            mb: "10rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
           className="card"
         >
-          <CardContent><Link to="/resources">Resources</Link></CardContent>
+          <CardContent>
+            <Link to="/resources">LINKS</Link>
+          </CardContent>
         </Paper>
       </Box>
       <Footer />

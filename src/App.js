@@ -48,6 +48,18 @@ function App() {
     getCards();
   };
 
+   const deleteCard = async (id) => {
+     let token = await user.getIdToken();
+     await fetch(API_URL + "/" + id, {
+       method: "DELETE",
+       headers: {
+         Authorization: "Bearer " + token,
+       },
+     });
+     getCards();
+   };
+
+
   useEffect(() => {
     fetchData.current = getCards;
   });
@@ -93,7 +105,7 @@ function App() {
           path="/mycards"
           render={() =>
             user ? (
-              <Mycards user={user} cards={cards} createCard={createCard} />
+              <Mycards user={user} cards={cards} createCard={createCard} deleteCard={deleteCard} />
             ) : (
               <Redirect to="/login" />
             )
