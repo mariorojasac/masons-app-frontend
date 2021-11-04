@@ -43,7 +43,7 @@ const Mycards = (props) => {
   };
 
   
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
@@ -66,7 +66,7 @@ const Mycards = (props) => {
           display="flex"
           justifyContent="center"
           alignItems="center"
-          sx={{ width: "100%", mt: "1rem", p: "1rem", flexWrap: "wrap" }}
+          sx={{ width: "100%", m: "1rem", p: "1rem", flexWrap: "wrap" }}
         >
           {props.cards.map((c) => (
             <Paper
