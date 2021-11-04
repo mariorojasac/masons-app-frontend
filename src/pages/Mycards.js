@@ -1,9 +1,18 @@
-
 import { useState } from "react";
+import * as React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import Button from "@mui/material/Button";
+import { positions } from "@mui/system";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import TextField from "@mui/material/TextField";
+import Modal from "@mui/material/Modal";
 
 const Mycards = (props) => {
+  
   const [formState, setFormState] = useState({
     title: "",
     picture: "",
@@ -22,38 +31,59 @@ const Mycards = (props) => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-     props.createCard(formState);
+    e.preventDefault();
+    props.createCard(formState);
     setFormState({
       title: "",
-    picture: "",
-    description: "",
-    sound: "",
-    type: "",
-    })
-  }
+      picture: "",
+      description: "",
+      sound: "",
+      type: "",
+    });
+  };
 
   
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
 
   return (
     <>
       <div>
         <Link to="/dashboard">
-          <button>Back to Dashboard</button>
+          <Button
+            variant="contained"
+            sx={{ width: "50%", mt: "1rem"}}
+          >
+            Back to Dashboard
+          </Button>
         </Link>
       </div>
 
       <div>
-        {props.cards.map((c) => (
-          <div key={c._id}>
-            <p>Title: {c.title}</p>
-            <p>Picture: {c.picture}</p>
-            <p>Description: {c.description}</p>
-            <p>Sound: {c.sound}</p>
-            <p>Type: {c.title}</p>
-          </div>
-        ))}
-
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          sx={{ width: "100%", mt: "1rem", p: "1rem", flexWrap: "wrap" }}
+        >
+          {props.cards.map((c) => (
+            <Paper
+              elevation={4}
+              sx={{ width: "20%", height: "20rem", p: "1rem", m: "1rem" }}
+              key={c._id}
+            >
+              <CardContent>
+                <p>{c.title}</p>
+                <p>Picture: {c.picture}</p>
+                <p>Description: {c.description}</p>
+                {/* <p>Sound: {c.sound}</p> */}
+                {/* <p>Type: {c.title}</p> */}
+              </CardContent>
+            </Paper>
+          ))}
+        </Box>
         <h1>Add Card</h1>
         <form onSubmit={handleSubmit}>
           <label>Title</label>
@@ -91,7 +121,9 @@ const Mycards = (props) => {
             name="type"
             onChange={handleChange}
           />
-          <input type="submit" value="Add Card" />
+          <Button type="submit" value="Add Card" variant="contained">
+            Add Card
+          </Button>
         </form>
       </div>
 
