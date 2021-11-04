@@ -52,10 +52,7 @@ const Mycards = (props) => {
     <>
       <div>
         <Link to="/dashboard">
-          <Button
-            variant="contained"
-            sx={{ width: "50%", mt: "1rem"}}
-          >
+          <Button variant="contained" sx={{ width: "50%", mt: "1rem" }}>
             Back to Dashboard
           </Button>
         </Link>
@@ -76,8 +73,13 @@ const Mycards = (props) => {
             >
               <CardContent>
                 <p>{c.title}</p>
-                <p>Picture: {c.picture}</p>
-                <p>Description: {c.description}</p>
+                <img
+                  src={c.picture}
+                  alt="picture"
+                  srcset=""
+                  style={{ height: "10rem" }}
+                />
+                <p>{c.description}</p>
                 {/* <p>Sound: {c.sound}</p> */}
                 {/* <p>Type: {c.title}</p> */}
               </CardContent>

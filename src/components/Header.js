@@ -17,20 +17,22 @@ const Header = (props) => {
           <Toolbar>
             {props.user ? (
               <>
-                
-                  <img
-                    src="https://i.imgur.com/OVOPbLz.jpeg"
-                    alt="masonsapp"
-                    style={{ height: 100 }}
-                  />
-                  <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    Welcome, {props.user.displayName}
-                  </Typography>
-                  <img src={props.user.photoURL} alt={props.user.displayName} />
-                  <Button color="inherit" onClick={logOut}>
-                    Log Out
-                  </Button>
-                
+                <img
+                  src="https://i.imgur.com/OVOPbLz.jpeg"
+                  alt="masonsapp"
+                  style={{ height: 100 }}
+                />
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                  Welcome, {props.user.displayName}
+                </Typography>
+                <img
+                  src={props.user.photoURL}
+                  alt={props.user.displayName}
+                  style={{height: "5rem", borderRadius: "50%" }}
+                />
+                <Button color="inherit" onClick={logOut}>
+                  Log Out
+                </Button>
               </>
             ) : (
               <></>
@@ -38,7 +40,6 @@ const Header = (props) => {
           </Toolbar>
         </AppBar>
       </Box>
-
     </header>
   );
 };
