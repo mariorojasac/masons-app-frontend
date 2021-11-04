@@ -81,7 +81,6 @@ function App() {
           render={() =>
             user ? (
               <>
-                
                 <Header user={user} />
                 <Dashboard user={user} />
               </>
@@ -94,7 +93,7 @@ function App() {
           path="/mycards"
           render={() =>
             user ? (
-              <Mycards cards={cards} createCard={createCard} />
+              <Mycards user={user} cards={cards} createCard={createCard} />
             ) : (
               <Redirect to="/login" />
             )
