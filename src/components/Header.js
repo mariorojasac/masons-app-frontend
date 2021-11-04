@@ -28,7 +28,7 @@ const Header = (props) => {
                 <img
                   src={props.user.photoURL}
                   alt={props.user.displayName}
-                  style={{height: "5rem", borderRadius: "50%" }}
+                  style={{height: "5rem", borderRadius: "50%", marginRight: "2rem" }}
                 />
                 <Button color="inherit" onClick={logOut}>
                   Log Out
