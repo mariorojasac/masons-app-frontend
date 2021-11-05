@@ -26,6 +26,12 @@ Make sure Dependacies are installed.
 Sign up as a user and then log in.
 Dashboard will be the central hub that you will be able to access everything from. Enjoy the app!
 
+# Unsolved issues
+- About Section selection
+- links to favorites
+- Category Selection
+- Media Queries
+
 # Future Enhancements
 - Picture && Sound Uploads
 - Better Device compatibility with all devices
