@@ -1,16 +1,9 @@
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import { useState } from "react";
-import { useParams, useHistory } from "react-router-dom";
 import * as React from "react";
 import Button from "@mui/material/Button";
-import { positions } from "@mui/system";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import TextField from "@mui/material/TextField";
-import Modal from "@mui/material/Modal";
+
 
 const Resources = (props) => {
   return (

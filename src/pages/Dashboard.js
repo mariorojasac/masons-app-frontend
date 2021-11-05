@@ -1,7 +1,5 @@
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 import { Link } from "react-router-dom";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import CardContent from "@mui/material/CardContent";

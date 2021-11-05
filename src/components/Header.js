@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
 import { logOut } from "../services/firebase";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";

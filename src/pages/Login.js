@@ -2,7 +2,6 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { signIn } from "../services/firebase";
 import CardContent from "@mui/material/CardContent";
-import Footer from "../components/Footer";
 import Button from "@mui/material/Button";
 const Login = (props) => {
   return (

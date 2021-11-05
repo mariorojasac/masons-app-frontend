@@ -1,23 +1,21 @@
 import { useState } from "react";
-import { useParams, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import * as React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Button from "@mui/material/Button";
-import { positions } from "@mui/system";
-import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
-import Modal from "@mui/material/Modal";
+
 
 const Mycards = (props) => {
 
   // const id = props.match.params.id;
   // const cards = props.cards;
   // const card = cards.find((c) => c._id === id);
-  const { id } = useParams();
+
   const history = useHistory();
 
 
@@ -176,7 +174,7 @@ const Mycards = (props) => {
                 <h3>{c.title}</h3>
                 <img
                   src={c.picture}
-                  alt="picture"
+                  alt="picturefromapi"
                   srcset=""
                   style={{ height: "10rem" }}
                 />

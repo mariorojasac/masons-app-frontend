@@ -4,15 +4,10 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import CardContent from "@mui/material/CardContent";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 
 const Home = (props) => {
-  const { children, value, index, ...other } = props;
 
   return (
     <div style={{ backgroundColor: "gold", m: "0" }}>
