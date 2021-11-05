@@ -6,16 +6,33 @@ import Footer from "../components/Footer";
 import Button from "@mui/material/Button";
 const Login = (props) => {
   return (
-    <>
+    <div
+      style={{
+        margin: "-1rem",
+        backgroundColor: "gold",
+        height: "60rem",
+      }}
+    >
       <Box
         display="flex"
         justifyContent="center"
         alignItems="center"
-        sx={{ width: "100%", m: "1rem", p: "1rem", flexWrap: "wrap" }}
+        sx={{
+          width: "100%",
+          m: "1rem",
+          p: "1rem",
+          flexWrap: "wrap",
+          backgroundColor: "gold",
+        }}
       >
+        <img
+          src="https://c.tenor.com/PrRf4W_uFicAAAAj/rafsdesign-rafs.gif"
+          alt="arrow"
+          style={{ width: "18rem", height: "10rem", margin: "-10rem" }}
+        />
         <Paper
           elevation={4}
-          sx={{ width: "20%", height: "20rem", p: "1rem", m: "1rem" }}
+          sx={{ width: "20%", height: "20rem", p: "1rem", m: "10rem" }}
         >
           <CardContent>
             <div>
@@ -27,7 +44,7 @@ const Login = (props) => {
           </CardContent>
         </Paper>
       </Box>
-    </>
+    </div>
   );
 };
 

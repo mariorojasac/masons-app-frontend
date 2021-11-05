@@ -13,7 +13,7 @@ const Header = (props) => {
   return (
     <header>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="static" style={{ backgroundColor: "red" }}>
           <Toolbar>
             {props.user ? (
               <>
@@ -28,9 +28,13 @@ const Header = (props) => {
                 <img
                   src={props.user.photoURL}
                   alt={props.user.displayName}
-                  style={{height: "5rem", borderRadius: "50%", marginRight: "2rem" }}
+                  style={{
+                    height: "5rem",
+                    borderRadius: "50%",
+                    marginRight: "2rem",
+                  }}
                 />
-                <Button color="inherit" onClick={logOut}>
+                <Button style={{ backgroundColor: "gold" }} onClick={logOut}>
                   Log Out
                 </Button>
               </>

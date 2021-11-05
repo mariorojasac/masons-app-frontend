@@ -60,40 +60,135 @@ const Mycards = (props) => {
   // const handleClose = () => setOpen(false);
 
   return (
-    <>
+    <div style={{ backgroundColor: "gold", padding: "1rem" }}>
       <div>
         <Link to="/dashboard">
-          <Button variant="contained" sx={{ width: "50%", mt: "1rem" }}>
+          <Button
+            variant="contained"
+            sx={{
+              width: "50%",
+              m: "3rem",
+              backgroundColor: "white",
+              color: "black",
+            }}
+            style={{ backgroundColor: "white", color: "black" }}
+          >
             Back to Dashboard
           </Button>
         </Link>
       </div>
+
+      <Box display="flex" justifyContent="center" style={{ width: "100%" }}>
+        <h1 style={{ width: "5rem", height: "5rem", marginRight: "5rem" }}>
+          Categories:
+        </h1>
+        <img
+          src="https://c.tenor.com/56o7RDGMd0UAAAAi/yellow-card.gif"
+          alt="wavy card"
+          srcset=""
+          style={{ width: "5rem", height: "5rem", marginLeft: "5rem" }}
+        />
+      </Box>
+
+      <Box display="flex" justifyContent="center" style={{ width: "100%", marginBottom: "2rem" }}>
+        <Button
+          style={{
+            width: "8rem",
+            height: "5rem",
+            marginRight: "5rem",
+            backgroundColor: "white",
+            color: "black",
+          }}
+        >
+          Home
+        </Button>
+        <Button
+          style={{
+            width: "8rem",
+            height: "5rem",
+            marginRight: "5rem",
+            backgroundColor: "white",
+            color: "black",
+          }}
+        >
+          Food
+        </Button>
+        <Button
+          style={{
+            width: "8rem",
+            height: "5rem",
+            marginRight: "5rem",
+            backgroundColor: "white",
+            color: "black",
+          }}
+        >
+          Play
+        </Button>
+        <Button
+          style={{
+            width: "8rem",
+            height: "5rem",
+            marginRight: "5rem",
+            backgroundColor: "white",
+            color: "black",
+          }}
+        >
+          Bathroom
+        </Button>
+        <Button
+          style={{
+            width: "8rem",
+            height: "5rem",
+            marginRight: "5rem",
+            backgroundColor: "white",
+            color: "black",
+          }}
+        >
+          Outside
+        </Button>{" "}
+        <Button
+          style={{
+            width: "8rem",
+            height: "5rem",
+            marginRight: "5rem",
+            backgroundColor: "white",
+            color: "black",
+          }}
+        >
+          Feeling
+        </Button>
+      </Box>
 
       <div>
         <Box
           display="flex"
           justifyContent="center"
           alignItems="center"
-          sx={{ width: "100%", m: "1rem", p: "1rem", flexWrap: "wrap" }}
+          sx={{ width: "100%", flexWrap: "wrap" }}
         >
           {props.cards.map((c) => (
             <Paper
               elevation={4}
-              sx={{ width: "20%", height: "20rem", p: "1rem", m: "1rem" }}
+              sx={{ width: "20%", height: "22rem", p: "1rem", m: "1rem" }}
               key={c._id}
             >
               <CardContent>
-                <p>{c.title}</p>
+                <h3>{c.title}</h3>
                 <img
                   src={c.picture}
                   alt="picture"
                   srcset=""
                   style={{ height: "10rem" }}
                 />
-                <p>{c.description}</p>
+                <h4>{c.description}</h4>
                 {/* <p>Sound: {c.sound}</p> */}
                 {/* <p>Type: {c.title}</p> */}
-                <Button variant="contained" type="submit" onClick={ () => removeCard(c._id) }>
+                <Button
+                  variant="contained"
+                  type="submit"
+                  style={{ backgroundColor: "gold", color: "black" }}
+                  onClick={() => removeCard(c._id)}
+                >
                   DELETE
                 </Button>
               </CardContent>
@@ -205,7 +300,12 @@ const Mycards = (props) => {
                 name="type"
                 onChange={handleChange}
               /> */}
-              <Button type="submit" value="Add Card" variant="contained">
+              <Button
+                type="submit"
+                value="Add Card"
+                variant="contained"
+                style={{ backgroundColor: "gold", color: "black" }}
+              >
                 Add Card
               </Button>
             </form>
@@ -214,7 +314,7 @@ const Mycards = (props) => {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

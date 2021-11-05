@@ -8,7 +8,14 @@ import CardContent from "@mui/material/CardContent";
 
 const Dashboard = (props) => {
   return (
-    <div className="container">
+    <div
+      style={{
+        margin: "-10rem",
+        height: "50rem",
+        backgroundColor: "gold",
+        // height: "60rem",
+      }}
+    >
       <Box
         display="flex"
         justifyContent="center"
@@ -22,14 +29,32 @@ const Dashboard = (props) => {
             height: "20rem",
             p: "1rem",
             m: "1rem",
+            mt: "10rem",
             mb: "10rem",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            flexWrap: "wrap",
           }}
           className="card"
         >
           <CardContent>
+            <img
+              src="https://c.tenor.com/3yzjqtIafAYAAAAj/love-doughnut-donut.gif"
+              alt="bear donut"
+              style={{
+                width: "80%",
+                height: "10rem",
+                p: "1rem",
+                m: "1rem",
+                mt: "10rem",
+                marginBottom: "1rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            />
             <Link to="/mycards">MY CARDS</Link>
           </CardContent>
         </Paper>
@@ -40,6 +65,7 @@ const Dashboard = (props) => {
             height: "20rem",
             p: "1rem",
             m: "1rem",
+            mt: "10rem",
             mb: "10rem",
             display: "flex",
             alignItems: "center",
@@ -48,6 +74,23 @@ const Dashboard = (props) => {
           className="card"
         >
           <CardContent>
+            <img
+              src="https://c.tenor.com/T6siG3zPhqkAAAAi/fire-engine-joypixels.gif"
+              alt="truck"
+              srcset=""
+              style={{
+                width: "80%",
+                height: "10rem",
+                p: "1rem",
+                m: "1rem",
+                mt: "10rem",
+                marginBottom: "1rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            />
             <Link to="/resources">LINKS</Link>
           </CardContent>
         </Paper>
