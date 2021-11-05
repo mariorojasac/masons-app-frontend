@@ -18,7 +18,7 @@ function App() {
 
   const fetchData = useRef(null);
 
-  const API_URL = "http://localhost:3001/api/card";
+  const API_URL = "https://mighty-crag-58767.herokuapp.com/api/card";
 
   const getCards = async () => {
     if (!user) return;

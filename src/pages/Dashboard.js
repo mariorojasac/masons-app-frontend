@@ -10,17 +10,15 @@ const Dashboard = (props) => {
   return (
     <div
       style={{
-        margin: "-10rem",
-        height: "50rem",
+        height: "53rem",
         backgroundColor: "gold",
-        // height: "60rem",
       }}
     >
       <Box
         display="flex"
         justifyContent="center"
         alignItems="center"
-        sx={{ width: "100%", mt: "10rem", p: "1rem", flexWrap: "wrap" }}
+        sx={{ width: "100%", mt: "0", p: "1rem", flexWrap: "wrap" }}
       >
         <Paper
           elevation={4}
