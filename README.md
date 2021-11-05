@@ -22,7 +22,6 @@ Will be a free open platform for everyone to use world wide.
 ![Pecsboard](src/media/IMG_0333.PNG)
 
 # Getting Started 
-You need to connect to your own database.
 Make sure Dependacies are installed.
 Sign up as a user and then log in.
 Dashboard will be the central hub that you will be able to access everything from. Enjoy the app!
